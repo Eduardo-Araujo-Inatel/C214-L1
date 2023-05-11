@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import Filters from 'components/filters';
+import { StoreBody } from 'components/filters/styles';
+import GridItens from 'components/gridItens';
+import Header from 'components/headerBar';
+import { NavBarProvider } from 'context/NavBarContext';
 import 'styles/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <NavBarProvider>
+      <div className="App">
+        <Header />
+        <StoreBody>
+          <Filters />
+          <GridItens />
+        </StoreBody>
+      </div>
+    </NavBarProvider>
   );
 }
 
