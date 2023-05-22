@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 export const TitleDiv = styled.div`
     width: 100vw;
-    height: 20vh;
+    height: 17vh;
     background: #f5f5f5;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 1px solid #aaaaaaaa;
+    border-left: 0px;
+    border-right: 0px;
 `;
 
 export const Title = styled.h2`

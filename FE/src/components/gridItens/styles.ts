@@ -6,7 +6,7 @@ export const GridContainer = styled.div`
     margin-bottom: 2.4vh;
     padding-right: 20px;
     width: 80vw;
-    height: 55vh;
+    height: 60vh;
     overflow-y: auto;
     display: grid;
     grid-template-columns: repeat(7, 1fr);

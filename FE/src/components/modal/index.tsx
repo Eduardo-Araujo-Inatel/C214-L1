@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Modal from "react-modal";
-import { OpenModal } from "./styles";
+import { BsSearch } from "react-icons/bs";
 
 const customStyles = {
   content: {
@@ -26,7 +26,8 @@ function ShowMoreInfoModal() {
 
   return (
     <div>
-      <OpenModal onClick={openModal}>Abrir Modal</OpenModal>
+      <BsSearch onClick={openModal}/>
+
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
