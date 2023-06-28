@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const CardBody = styled.div`
     background: rgb(245, 245, 245);;
-    height: 28vh;
+    width: 170px;
+    height: 210px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     border: 1px solid #aaaaaaaa;
 
     img {
@@ -19,6 +19,8 @@ export const CardName = styled.h2`
     font-variant: small-caps;
     font-size: 20px;
     margin: 0;
+    height: 45px;
+    text-align: center;
 `;
 
 export const CardCategory = styled.span`
@@ -26,6 +28,8 @@ export const CardCategory = styled.span`
     font-variant: small-caps;
     font-size: 14px;
     margin: 0;
+    height: 50px;
+    text-align: center;
 `;
 
 export const CardPrice = styled.h3`

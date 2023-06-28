@@ -1,0 +1,68 @@
+[
+  {
+    "url": "https://cdn.akamai.steamstatic.com/steam/apps/550/header.jpg?t=1675801903",
+    "name": "Left 4 Dead 2",
+    "categories": ["Zombies", "Co-op", "Tiros em Primeira Pessoa"],
+    "price": 32.99
+  },
+  {
+    "url": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg?t=1628059087",
+    "name": "Red Dead Redemption 2",
+    "categories": ["Ação", "Aventura", "Mundo Aberto"],
+    "price": 199
+  },
+  {
+    "url": "https://cdn.akamai.steamstatic.com/steam/apps/292030/header.jpg?t=1627406285",
+    "name": "The Witcher 3: Wild Hunt",
+    "categories": ["RPG", "Ação", "Mundo Aberto"],
+    "price": 59.99
+  },
+  {
+    "url": "https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg?t=1674910447",
+    "name": "Grand Theft Auto V",
+    "categories": ["Ação", "Mundo Aberto", "Multijogador"],
+    "price": 99.99
+  },
+  {
+    "url": "https://cdn.akamai.steamstatic.com/steam/apps/570/header.jpg?t=1665895180",
+    "name": "Dota 2",
+    "categories": ["Estratégia", "Multijogador", "Grátis"],
+    "price": 99.99
+  },
+  {
+    "url": "https://cdn.akamai.steamstatic.com/steam/apps/730/header.jpg?t=1675801903",
+    "name": "Counter-Strike: Global Offensive",
+    "categories": ["Ação", "Multijogador", "Tiro"],
+    "price": 99.99
+  },
+  {
+    "url": "https://cdn.akamai.steamstatic.com/steam/apps/240/header.jpg?t=1675801903",
+    "name": "Counter-Strike 1.6",
+    "categories": ["Ação", "Multijogador", "Tiro"],
+    "price": 9.99
+  },
+  {
+    "url": "https://cdn.akamai.steamstatic.com/steam/apps/489830/header.jpg?t=1676533693",
+    "name": "Half-Life: Alyx",
+    "categories": ["Ação", "Aventura", "VR"],
+    "price": 94.99
+  },
+  {
+    "url": "https://cdn.akamai.steamstatic.com/steam/apps/892970/header.jpg?t=1676542000",
+    "name": "Hades",
+    "categories": ["RPG", "Ação", "Roguelike"],
+    "price": 37.99
+  },
+  {
+    "url": "https://cdn.akamai.steamstatic.com/steam/apps/227300/header.jpg?t=1675857363",
+    "name": "Euro Truck Simulator 2",
+    "categories": ["Simulação", "Mundo Aberto", "Realista"],
+    "price": 36.99
+  },
+  {
+    "url": "https://cdn.akamai.steamstatic.com/steam/apps/252490/header.jpg?t=1675727559",
+    "name": "Rust",
+    "categories": ["Sobrevivência", "Multijogador", "Mundo Aberto"],
+    "price": 89.99
+  }
+]
