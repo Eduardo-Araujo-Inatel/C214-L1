@@ -119,3 +119,5 @@ lerna-debug.log
 Thumbs.db
 
 build/
+Frontend/cypress/videos/
+Frontend/cypress/screenshots/

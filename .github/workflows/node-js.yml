@@ -11,24 +11,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Install dependencies
-      working-directory: ./Backend
-      run: npm install
+      - uses: actions/checkout@v3
+      
+      - name: Install dependencies
+        working-directory: ./Backend
+        run: npm install
 
-    - name: Execute tests
-      working-directory: ./Backend
-      run: npm run test
+      - name: Execute tests
+        working-directory: ./Backend
+        run: npm run test
 
-    - name: Compress coverage folder
-      run: zip -r test-be.zip Backend/coverage
+      - name: Compress coverage folder
+        run: zip -r test-be.zip Backend/coverage
 
-    - name: Upload test artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: Test-artifact
-        path: test-be.zip
+      - name: Upload test artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Test-artifact
+          path: test-be.zip
 
   build-BE:
     runs-on: ubuntu-latest
@@ -54,23 +54,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Install dependencies
-      working-directory: ./Backend
-      run: npm install
-    
-    - name: Install dependencies
-      working-directory: ./Frontend
-      run: npm install
-    
-    - name: Start Backend
-      working-directory: ./Backend
-      run: npm run start &
+      - uses: actions/checkout@v3
+      
+      - name: Install dependencies
+        working-directory: ./Backend
+        run: npm install
+      
+      - name: Install dependencies
+        working-directory: ./Frontend
+        run: npm install
+      
+      - name: Start Backend
+        working-directory: ./Backend
+        run: npm run start &
 
-    - name: Start Frontend
-      working-directory: ./Frontend
-      run: npm run start &
+      - name: Start Frontend
+        working-directory: ./Frontend
+        run: npm run start &
+    
+      - name: Test FE
+        working-directory: ./Frontend
+        run: npm run test
+
+      - name: Compress tests artifacts
+        run: zip -r tests-fe.zip Frontend/cypress/
+
+      - name: Upload tests artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Build-artifact
+          path: tests-fe.zip
 
   build-FE:
     runs-on: ubuntu-latest
@@ -86,6 +99,10 @@ jobs:
       - name: Build FE
         working-directory: ./Frontend
         run: npm run build
+
+      - name: Start Frontend
+        working-directory: ./Frontend
+        run: npm run start &
 
       - name: Compress build folder
         run: zip -r build-fe.zip Frontend/build/
