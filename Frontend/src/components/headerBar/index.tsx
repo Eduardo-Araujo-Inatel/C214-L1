@@ -1,4 +1,3 @@
-import { useStore } from 'hooks/useStore';
 import { NavBar, NavBarOption, Title, TitleDiv } from './styles';
 import ShowAddItemModal from 'components/modal/addItem';
 

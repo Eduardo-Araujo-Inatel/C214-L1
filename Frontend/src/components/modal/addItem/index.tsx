@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Modal from "react-modal";
 import { NavBarOption } from "components/headerBar/styles";
 import { ContainerImage, FormNewItem } from "./styles";

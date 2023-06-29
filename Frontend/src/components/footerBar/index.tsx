@@ -1,6 +1,7 @@
 import { useStore } from 'hooks/useStore';
 import { TitleDiv } from './styles';
 import { useEffect, useState } from 'react';
+import BuyModal from 'components/modal/buy';
 
 function Footer() {
 	const { purchaseList } = useStore();
@@ -21,6 +22,7 @@ function Footer() {
 	return (
 		<TitleDiv>
 			R$ {price.toFixed(2)}
+			<BuyModal price={price} />
 		</TitleDiv>
 	);
 }

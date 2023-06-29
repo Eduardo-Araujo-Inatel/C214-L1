@@ -39,7 +39,7 @@ function Card({ name, url, price, categories, about, gameObj }: CardProps) {
             <CardPrice>R$ {price.toFixed(2)}</CardPrice>
             <CardSelect>
                 <ShowMoreInfoModal name={name} url={url} price={price} categories={categories} about={about}/>
-                {isSelected ? <BsCartX onClick={unSelectItem} /> : <BsCartPlus onClick={selectItem} />}
+                {isSelected ? <BsCartX onClick={unSelectItem} style={{color: "red"}}/> : <BsCartPlus onClick={selectItem} style={{color: "green"}}/>}
             </CardSelect>
         </CardBody>
     );
