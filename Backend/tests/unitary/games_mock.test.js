@@ -1,5 +1,7 @@
 const { GamesModel } = require('../../src/infrasctructure/database');
 const Games = require('./../../src/port/games_repository');
+const Validation = require("./../../src/utils/validation");
+const Constants = require("./../../src/utils/constants");
 
 describe('create', () => {
 
@@ -95,4 +97,94 @@ describe('create', () => {
             })
         )
     });
+
+    it('Empty Category', async () => {
+        const result = Validation.create({
+            id: 1,
+            Titulo: "Spider Man",
+            Preco: 200.50,
+            Categorias: [],
+            Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
+            Imagem: "https://linkqualquer"
+        })
+
+        expect(result.Categorias).toEqual(undefined);
+    });
+
+    it('Empty Title', async () => {
+        const result = Validation.create({
+            id: 1,
+            Titulo: "",
+            Preco: 200.50,
+            Categorias: ["Ação"],
+            Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
+            Imagem: "https://linkqualquer"
+        })
+
+        expect(result.Titulo).toEqual(undefined);
+    });
+
+    it('Empty Price', async () => {
+        const result = Validation.create({
+            id: 1,
+            Titulo: "Spider man",
+            Preco: null,
+            Categorias: ["Ação"],
+            Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
+            Imagem: "https://linkqualquer"
+        })
+
+        expect(result.Preco).toEqual(undefined);
+    });
+
+    it('String Price', async () => {
+        const result = Validation.create({
+            id: 1,
+            Titulo: "Spider man",
+            Preco: "200",
+            Categorias: ["Ação"],
+            Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
+            Imagem: "https://linkqualquer"
+        })
+
+        expect(result.Preco).toEqual(undefined);
+    });
+
+    it('String Category', async () => {
+        const result = Validation.create({
+            id: 1,
+            Titulo: "Spider man",
+            Preco: 200,
+            Categorias: "Ação, Aventura",
+            Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
+            Imagem: "https://linkqualquer"
+        })
+
+        expect(result.Categorias).toEqual(undefined);
+    });
+
+    it('Without Image', async () => {
+        const result = Validation.create({
+            id: 1,
+            Titulo: "Spider man",
+            Preco: 200,
+            Categorias: ["Ação", "Aventura"],
+            Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
+        })
+
+        expect(result).toEqual(Constants.ErrorValidation);
+    });
+
+    it('Empty About', async () => {
+        const result = Validation.create({
+            id: 1,
+            Titulo: "Spider man",
+            Preco: 200,
+            Categorias: ["Ação"],
+            Sobre: "",
+            Imagem: "https://linkqualquer"
+        })
+        expect(result.Sobre).toEqual(undefined);
+    });
+
 })
