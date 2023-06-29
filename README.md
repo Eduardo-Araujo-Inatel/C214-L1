@@ -19,6 +19,10 @@ Contudo, neste momento iremos refatorar e aprimorar este trabalho para o propós
 - MongoDB -> Banco de dados não relacional para armazenar as informações dos produtos.
 - Jest -> Ferramenta para realizar os testes unitários.
 
+## Comandos
+Iniciar BE: ```cd Backend && npm run start```
+
+Iniciar FE: ```cd Frontend && npm run start```
 
 ## Equipe
 Eduardo Borges <br>
