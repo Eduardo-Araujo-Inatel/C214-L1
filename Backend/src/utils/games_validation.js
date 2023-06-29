@@ -23,7 +23,7 @@ const create = {
         },
         type: 'string',
     },
-    Imagem: {
+    Url: {
         presence: {
             allowEmpty: false,
         },

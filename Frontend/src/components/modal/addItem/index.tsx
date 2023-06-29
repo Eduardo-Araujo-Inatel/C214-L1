@@ -31,7 +31,7 @@ const options = [
 function ShowAddItemModal() {
   const [modalIsOpen, setIsOpen] = useState(false);
   const { control, register, watch, formState: { errors } } = useForm()
-  const urlImage = watch("Imagem");
+  const urlImage = watch("Url");
 
   function openModal() {
     setIsOpen(true);
@@ -107,8 +107,8 @@ function ShowAddItemModal() {
               <Input
                 control={control}
                 type="text"
-                error={errors.Imagem}
-                {...register("Imagem", { required: true })}
+                error={errors.Url}
+                {...register("Url", { required: true })}
               />
             </div>
             <label htmlFor="">Preview da imagem:</label>

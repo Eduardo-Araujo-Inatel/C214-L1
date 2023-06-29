@@ -13,7 +13,7 @@ describe('create', () => {
                 Preco: 200.50,
                 Categorias: ["Action", "Adventure"],
                 Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
-                Imagem: "https://linkqualquer"
+                Url: "https://linkqualquer"
             }),
         }));
 
@@ -23,7 +23,7 @@ describe('create', () => {
             Preco: 200.50,
             Categorias: ["Action", "Adventure"],
             Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
-            Imagem: "https://linkqualquer"
+            Url: "https://linkqualquer"
         })).toEqual(
             expect.objectContaining({
                 id: expect.any(Number),
@@ -31,7 +31,7 @@ describe('create', () => {
                 Preco: expect.any(Number),
                 Categorias: expect.any(Array),
                 Sobre: expect.any(String),
-                Imagem: expect.any(String),
+                Url: expect.any(String),
             })
         )
     });
@@ -44,7 +44,7 @@ describe('create', () => {
                 Preco: "Spider Man",
                 Categorias: "Prata",
                 Sobre: "",
-                Imagem: 30
+                Url: 30
             }),
         }));
 
@@ -54,7 +54,7 @@ describe('create', () => {
             Preco: 200.50,
             Categorias: ["Action", "Adventure"],
             Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
-            Imagem: "https://linkqualquer"
+            Url: "https://linkqualquer"
 
         })).not.toEqual(
             expect.objectContaining({
@@ -63,7 +63,7 @@ describe('create', () => {
                 Preco: expect.any(Number),
                 Categorias: expect.any(Array),
                 Sobre: expect.any(String),
-                Imagem: expect.any(String),
+                Url: expect.any(String),
             })
         )
     });
@@ -76,7 +76,7 @@ describe('create', () => {
                 Preco: "",
                 Categorias: [],
                 Sobre: "",
-                Imagem: ""
+                Url: ""
             }),
         }));
 
@@ -85,7 +85,7 @@ describe('create', () => {
             Preco: 200.50,
             Categorias: ["Action", "Adventure"],
             Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
-            Imagem: "https://linkqualquer"
+            Url: "https://linkqualquer"
         })).not.toEqual(
             expect.objectContaining({
                 id: expect.any(Number),
@@ -93,7 +93,7 @@ describe('create', () => {
                 Preco: expect.any(Number),
                 Categorias: expect.any(Array),
                 Sobre: expect.any(String),
-                Imagem: expect.any(String),
+                Url: expect.any(String),
             })
         )
     });
@@ -105,7 +105,7 @@ describe('create', () => {
             Preco: 200.50,
             Categorias: [],
             Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
-            Imagem: "https://linkqualquer"
+            Url: "https://linkqualquer"
         })
 
         expect(result.Categorias).toEqual(undefined);
@@ -118,7 +118,7 @@ describe('create', () => {
             Preco: 200.50,
             Categorias: ["Ação"],
             Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
-            Imagem: "https://linkqualquer"
+            Url: "https://linkqualquer"
         })
 
         expect(result.Titulo).toEqual(undefined);
@@ -131,7 +131,7 @@ describe('create', () => {
             Preco: null,
             Categorias: ["Ação"],
             Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
-            Imagem: "https://linkqualquer"
+            Url: "https://linkqualquer"
         })
 
         expect(result.Preco).toEqual(undefined);
@@ -144,7 +144,7 @@ describe('create', () => {
             Preco: "200",
             Categorias: ["Ação"],
             Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
-            Imagem: "https://linkqualquer"
+            Url: "https://linkqualquer"
         })
 
         expect(result.Preco).toEqual(undefined);
@@ -157,7 +157,7 @@ describe('create', () => {
             Preco: 200,
             Categorias: "Ação, Aventura",
             Sobre: "Jovem peter parker que ganhou poderes e se tornou um herói chamado homem aranha.",
-            Imagem: "https://linkqualquer"
+            Url: "https://linkqualquer"
         })
 
         expect(result.Categorias).toEqual(undefined);
@@ -182,7 +182,7 @@ describe('create', () => {
             Preco: 200,
             Categorias: ["Ação"],
             Sobre: "",
-            Imagem: "https://linkqualquer"
+            Url: "https://linkqualquer"
         })
         expect(result.Sobre).toEqual(undefined);
     });

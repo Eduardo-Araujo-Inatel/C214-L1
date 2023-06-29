@@ -20,7 +20,7 @@ const GamesSchema = new Schema({
     Preco: Number,
     Categorias: Array,
     Sobre: String,
-    Image: String
+    Url: String
 });
 
 const GamesModel = mongoose.model('Games', GamesSchema);
