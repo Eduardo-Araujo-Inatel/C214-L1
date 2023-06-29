@@ -18,10 +18,11 @@ jobs:
       run: npm install
 
     - name: Execute tests
+      working-directory: ./Backend
       run: npm run test
 
     - name: Compress coverage folder
-      run: zip -r coverage.zip coverage
+      run: zip -r coverage.zip Backend/coverage
 
     - name: Upload test artifact
       uses: actions/upload-artifact@v2
