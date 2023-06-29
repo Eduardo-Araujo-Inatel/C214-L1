@@ -17,6 +17,7 @@ function Filters({ games }: FiltersProps) {
 	useEffect(() => {
 		if (categorySelected)
 			setCategoriesSelected(categorySelected.map((category: any) => category.value))
+	// eslint-disable-next-line
 	}, [categorySelected]);
 
 	useEffect(() => {
