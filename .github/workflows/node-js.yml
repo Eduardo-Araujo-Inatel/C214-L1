@@ -38,10 +38,11 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Install dependencies
+        working-directory: ./Backend
         run: npm install
 
       - name: Compress build folder
-        run: zip -r build.zip ./
+        run: zip -r build.zip Backend/
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
