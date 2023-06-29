@@ -66,11 +66,11 @@ jobs:
     
     - name: Start Backend
       working-directory: ./Backend
-      run: npm run start
+      run: npm run start &
 
     - name: Start Frontend
       working-directory: ./Frontend
-      run: npm run start
+      run: npm run start &
 
   build-FE:
     runs-on: ubuntu-latest
