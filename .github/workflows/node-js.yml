@@ -82,7 +82,7 @@ jobs:
       - name: Upload tests artifact
         uses: actions/upload-artifact@v2
         with:
-          name: Build-artifact
+          name: Test-artifact
           path: tests-fe.zip
 
   build-FE:
