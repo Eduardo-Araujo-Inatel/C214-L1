@@ -46,7 +46,7 @@ function ShowAddItemModal() {
     toSubmit.data.Categorias = toSubmit.data.Categorias.map((category: any)=>category?.value)
     axios.post("http://localhost:4000/games/create", toSubmit.data)
       .then((response => {
-        console.log(response.data)
+        closeModal()
       }))
   }
 
@@ -115,7 +115,7 @@ function ShowAddItemModal() {
             <ContainerImage>
               <img alt="Preview" src={urlImage} height={200} />
             </ContainerImage>
-            <button type="submit" >Adicionar</button>
+            <button type="submit">Adicionar</button>
             <button onClick={closeModal} type="button">Fechar</button>
           </FormNewItem>
         </Form>
