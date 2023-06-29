@@ -22,7 +22,7 @@ jobs:
       run: npm run test
 
     - name: Compress coverage folder
-      run: zip -r coverage-be.zip Backend/coverage
+      run: zip -r test-be.zip Backend/coverage
 
     - name: Upload test artifact
       uses: actions/upload-artifact@v2
